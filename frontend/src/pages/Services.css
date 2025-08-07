@@ -1,0 +1,68 @@
+/* Services.css */
+
+.services-container {
+  background: linear-gradient(to right, #f9fafb, #eaf3fb); /* subtle blue-white gradient */
+  padding: 60px 20px;
+  text-align: center;
+  color: #00205b; /* deep navy blue */
+}
+
+.services-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #ff8c00; /* warm solar orange */
+}
+
+.services-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.services-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.services-list li::before {
+  content: "☀️";
+  position: absolute;
+  left: 0;
+  color: #ffd700; /* gold yellow */
+  font-size: 1.2rem;
+}
+
+/* ========================
+   ✅ MOBILE RESPONSIVENESS
+=========================== */
+
+@media (max-width: 640px) {
+  .services-container {
+    padding: 40px 15px;
+  }
+
+  .services-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .services-list {
+    max-width: 100%;
+  }
+
+  .services-list li {
+    font-size: 1rem;
+    padding-left: 26px;
+  }
+
+  .services-list li::before {
+    font-size: 1rem;
+    top: 2px;
+  }
+}

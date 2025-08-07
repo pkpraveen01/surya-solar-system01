@@ -1,0 +1,238 @@
+.landing-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+/* HERO SECTION */
+.hero-section {
+  position: relative;
+  background: url('/hero-bg.jpg') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/overlay-texture.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 0 1rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-button {
+  display: inline-block;
+  background-color: #f59e0b;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #d97706;
+}
+
+/* TESTIMONIALS SECTION */
+.testimonials-section {
+  background-color: #ffffff;
+  padding: 4rem 1rem;
+  text-align: center;
+  color: #1f2937;
+}
+
+.testimonials-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.testimonials-section .sub-heading {
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin-bottom: 2.5rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-card p {
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: #374151;
+}
+
+.testimonial-card h4 {
+  font-weight: bold;
+  color: #111827;
+}
+
+/* GALLERY SECTION */
+.gallery-section {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #f9fafb;
+}
+
+.gallery-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #111827;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* FLOATING SUPPORT BUTTONS */
+.support-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 100;
+}
+
+.call-button,
+.whatsapp-button {
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  background-color: #f59e0b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.call-button:hover,
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-button {
+  background-color: #25d366;
+}
+
+/* ========================
+   ✅ MEDIA QUERIES
+===========================*/
+
+/* Tablets and Windows (≤1024px) */
+@media (max-width: 1024px) {
+  .gallery-grid,
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Devices (≤640px) */
+@media (max-width: 640px) {
+  .gallery-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid img {
+    height: 200px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .hero-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .testimonial-card {
+    font-size: 0.95rem;
+    padding: 1.2rem;
+  }
+
+  .landing-container {
+    padding-bottom: 80px; /* space for floating buttons */
+  }
+}
