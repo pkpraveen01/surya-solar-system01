@@ -39,10 +39,11 @@ const Inquire = () => {
         formData.append('electricityBill', billFile);
       }
 
-      await axios.post('http://localhost:5000/api/inquiry', formData, {
-        withCredentials: true,
-        headers: { 'Content-Type': 'multipart/form-data' },
-      });
+     await axios.post('https://surya-solar-system.onrender.com/api/inquiry', formData, {
+  withCredentials: true,
+  headers: { 'Content-Type': 'multipart/form-data' },
+});
+
 
       alert('Inquiry submitted successfully!');
       setForm({ name: '', phone: '', email: '', address: '', caNumber: '' });

@@ -7,9 +7,10 @@ const AdminInquiries = () => {
   useEffect(() => {
     const fetchInquiries = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/inquiry/all", {
-          withCredentials: true,
-        });
+      const res = await axios.get("https://surya-solar-system.onrender.com/api/inquiry/all", {
+  withCredentials: true,
+});
+
         setInquiries(res.data);
       } catch (err) {
         alert("Unauthorized. Redirecting to login.");
